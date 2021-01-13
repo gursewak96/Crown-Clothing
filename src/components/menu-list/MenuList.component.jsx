@@ -1,6 +1,5 @@
 import React from 'react';
 import "./MenuList.styles.scss";
-
 import MenuItem from "../menu-item/MenuItem.component";
 
 class MenuList extends React.Component {
@@ -46,7 +45,8 @@ class MenuList extends React.Component {
     }
 
     render(){
-        const menuItems = this.state.sections.map(({id, imageUrl, title, size}) => <MenuItem key={id} size={size} imageUrl={imageUrl} title={title}/>);
+      console.log(this.props);
+        const menuItems = this.state.sections.map(({id, ...menuProps}) => <MenuItem key={id} {...menuProps}/>);
         return (
             <div className="directory-menu">
                 {menuItems}

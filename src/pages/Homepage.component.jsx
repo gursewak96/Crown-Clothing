@@ -3,7 +3,7 @@ import "./Homepage.styles.scss"
 
 import MenuList from '../components/menu-list/MenuList.component';
 
-const HomePage = ()=>(
+const HomePage = (props)=>(
     <div className="homepage">
 
         <div>Navigation</div>
